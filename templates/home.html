@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<style>
+    body{
+        background:black;
+    }
+    .title{
+        color:white;
+        font-size:50px;
+        text-align:center;
+    }
+    #container{
+        background:#DBDBDC;
+        height:600px;
+        width:800px;
+        margin:auto;
+        border-radius:10px;
+        overflow-y:scroll;
+    }
+    .bot-box{
+        float:left;
+        width:400px;
+        max-width:400px;
+        min-height:50px;
+        margin:10px;
+        background:white;
+        border-radius:10px;
+    }
+    .box-text{
+        margin-left:10px;
+    }
+    .our-box{
+        float:right;
+        width:400px;
+        max-width:400px;
+        min-height:50px;
+        margin:10px;
+        background:#2361E7;
+        border-radius:10px;
+    }
+    .our-text{
+        color:white;
+        margin-left:10px;
+    }
+    #input{
+        position:relative;
+        width:30vw;
+        height:30px;
+        top:10px;
+        left:500px;
+    }
+</style>
+<body>
+    <p class="title">Chatbot</p>
+    <div id="container">
+    <div class="bot-box"><p class="box-text">Hello, I am a chatbot! How can I help you?</p></div>
+    </div>
+    <form method="POST" id="form" onsubmit="getInput(); return false">
+    {% csrf_token %}
+    <input type="text" id="input">
+    </form>
+
+    <script>
+        // csrf token for fetching
+        function getToken(name){
+        var cookieValue = null
+        if(document.cookie && document.cookie !==''){
+            var cookies = document.cookie.split(';')
+            for(var i=0;i<cookies.length;i++){
+            var cookie = cookies[i].trim();
+            if(cookie.substring(0,name.length+1)===(name+'=')){
+                cookieValue = decodeURIComponent(cookie.substring(name.length+1))
+                break
+            }
+            }
+        }
+        return cookieValue;
+        }
+        var csrftoken = getToken('csrftoken')
+
+        
+        function getInput(){
+            if (document.getElementById('input').value == ''){
+                alert('Invalid input')
+            }
+            else{
+                // our input
+                const newDiv = document.createElement('div')
+                document.getElementById('container').appendChild(newDiv)
+                newDiv.classList.add('our-box')
+                const newText = document.createElement('p')
+                newText.classList.add('our-text')
+                newDiv.appendChild(newText)
+                newText.innerHTML = document.getElementById('input').value
+                document.getElementById('input').value = ''
+                // bot input
+                const newBotDiv = document.createElement('div')
+                document.getElementById('container').appendChild(newBotDiv)
+                newBotDiv.classList.add('bot-box')
+                const newBotText = document.createElement('p')
+                newBotText.classList.add('bot-text')
+                newBotDiv.appendChild(newBotText)
+                // newBotText.innerHTML = 
+                // auto scroll
+                const container = document.getElementById("container")
+                container.scrollTop = container.scrollHeight
+            }
+        }
+    </script>
+</body>
+</html>
