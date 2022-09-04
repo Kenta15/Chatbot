@@ -15,21 +15,6 @@
                 "Hi there, how can I help?",
                 "Hi, what can I do for you today?"
             ]
-        },
-        {
-            "tag": "exit",
-            "patterns": [
-                "Bye",
-                "Good Bye",
-                "See you",
-                "Exit",
-                "Bye-bye"
-            ],
-            "responses":[
-                "Bye",
-                "See you",
-                "Thank you for contacting"
-            ]
         }
     ]
 }

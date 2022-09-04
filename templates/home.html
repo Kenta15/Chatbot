@@ -32,7 +32,7 @@
         background:white;
         border-radius:10px;
     }
-    .box-text{
+    .bot-text{
         margin-left:10px;
     }
     .our-box{
@@ -90,6 +90,7 @@
                 alert('Invalid input')
             }
             else{
+                getResponse(document.getElementById('input').value)
                 // our input
                 const newDiv = document.createElement('div')
                 document.getElementById('container').appendChild(newDiv)
@@ -99,17 +100,52 @@
                 newDiv.appendChild(newText)
                 newText.innerHTML = document.getElementById('input').value
                 document.getElementById('input').value = ''
-                // bot input
-                const newBotDiv = document.createElement('div')
-                document.getElementById('container').appendChild(newBotDiv)
-                newBotDiv.classList.add('bot-box')
-                const newBotText = document.createElement('p')
-                newBotText.classList.add('bot-text')
-                newBotDiv.appendChild(newBotText)
-                // newBotText.innerHTML = 
-                // auto scroll
-                const container = document.getElementById("container")
-                container.scrollTop = container.scrollHeight
+            }
+        }
+
+        function getResponse(input){
+            // Prevent refreshing
+            event.preventDefault()
+                
+            var url = 'chatbot/'
+            console.log(input)
+            fetch(url,{
+              method:'POST',
+              headers:{
+                  'Content-Type':'application/json',
+                  'X-CSRFToken':csrftoken,
+              },
+              body:JSON.stringify({'input':input})
+            })
+            .then((res) => {
+              return res.json()
+            })
+            .then((data) => {
+              showResponse(data)
+            })
+            .catch(() => {
+              console.log('error')
+            })
+        }
+
+        function showResponse(response){
+            // bot input
+            const newBotDiv = document.createElement('div')
+            document.getElementById('container').appendChild(newBotDiv)
+            newBotDiv.classList.add('bot-box')
+            const newBotText = document.createElement('p')
+            newBotText.classList.add('bot-text')
+            newBotDiv.appendChild(newBotText)
+            newBotText.innerHTML = response['response']
+            // auto scroll
+            const container = document.getElementById("container")
+            container.scrollTop = container.scrollHeight
+
+            if(response['response'] == 'Bye!'){
+                console.log('bey')
+                setTimeout(() => {
+                    window.location.reload()
+                }, 800)
             }
         }
     </script>
