@@ -9,6 +9,7 @@
 <style>
     body{
         background:black;
+        font-family: Sans-Serif;
     }
     .title{
         color:white;
@@ -59,7 +60,7 @@
 <body>
     <p class="title">Chatbot</p>
     <div id="container">
-    <div class="bot-box"><p class="box-text">Hello, I am a chatbot! How can I help you?</p></div>
+    <div class="bot-box"><p class="bot-text">Hello, I am a chatbot! How can I help you? <br> (Type 'q' to exit)</p></div>
     </div>
     <form method="POST" id="form" onsubmit="getInput(); return false">
     {% csrf_token %}
