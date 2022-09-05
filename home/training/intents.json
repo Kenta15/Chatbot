@@ -5,16 +5,133 @@
             "patterns": [
                 "Hi",
                 "Hello",
-                "What's up",
-                "How are you doing?",
-                "Hey"
+                "What is up",
+                "How are you doing",
+                "Hey",
+                "yo",
+                "sup"
             ],
             "responses":[
                 "Hey!",
                 "Hello",
                 "Hi there, how can I help?",
-                "Hi, what can I do for you today?"
+                "Hi, what can I do for you today?",
+                "Hi, there"
+            ]
+        },
+        {
+            "tag": "joke",
+            "patterns": [
+                "tell me a joke",
+                "tell me something funny",
+                "make me laugh"
+            ],
+            "responses":[
+                "What do you call a robot who likes to row? A row-bot!",
+                "How do robots pay for things? With cache, of course!",
+                "What is a robot's favorite type of music? Heavy metal!"
+            ]
+        },
+        {
+            "tag": "refund",
+            "patterns": [
+                "When will I get refund",
+                "How long should I wait for refund",
+                "how long should it take to get refund"
+            ],
+            "responses":[
+                "the refund will be initiated in 2 buisiness days"
+            ]
+        },
+        {
+            "tag": "IncorrectItem",
+            "patterns": [
+                "the item delivered is damaged",
+                "the item I got is incorrect",
+                "I got damaged items",
+                "What should I do if I received damaged items"
+            ],
+            "responses":[
+                "You can either request a refund or return defective items for replacement"
+            ]
+        },
+        {
+            "tag": "time",
+            "patterns": [
+                "what time are you available",
+                "when are you available",
+                "when is available for you",
+                "what time are you working",
+                "what time does work the best for you"
+            ],
+            "responses":[
+                "I am available 24/7 365days. Talk to me whenever you want!"
+            ]
+        },
+        {
+            "tag": "products",
+            "patterns": [
+                "what do you sell",
+                "what can I buy",
+                "what are the products you sell",
+                "how can I see the products",
+                "what merchandise do you sell"
+            ],
+            "responses":[
+                "we sell groceries, clothes, digital devices, cosmetics, and many more!"
+            ]
+        },
+        {
+            "tag": "shipping",
+            "patterns": [
+                "How long does it take for shipping",
+                "When will my items be devivered",
+                "how long does it take to get items",
+                "how long should I wait to get items"
+            ],
+            "responses":[
+                "Items you purchased will be delivered within a week"
+            ]
+        },
+        {
+            "tag": "late",
+            "patterns": [
+                "my items are not still delivered",
+                "delivery is late",
+                "It has been a month after I purchase the product",
+                "I am still waiting for items to get devlivered"
+            ],
+            "responses":[
+                "If your items are not delivered within a week, please contact xx-xxxx-xxxx for more information."
+            ]
+        },
+        {
+            "tag": "language",
+            "patterns": [
+                "what language do you speak",
+                "what kind of languages do you speak",
+                "what languages are supported"
+            ],
+            "responses":[
+                "We support English only!"
+            ]
+        },
+        {
+            "tag": "setting",
+            "patterns": [
+                "I want to change email",
+                "how to change email settings",
+                "how can I change email",
+                "I forgot username",
+                "I forgot password",
+                "how to change password without current password",
+                "how to change password without email address",
+                "how to change password without username"
+            ],
+            "responses":[
+                "You can change your personal information at Account/User Settings. If you forgot current username or password, contact xx-xxxx-xxxx for more information"
             ]
         }
+
     ]
 }

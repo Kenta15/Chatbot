@@ -40,7 +40,6 @@ y_train = np.array(y_train)
 
 class ChatDataset(Dataset):
     def __init__(self):
-        print(len(X_train))
         self.n_samples = len(X_train)
         self.x_data = X_train
         self.y_data = y_train
@@ -57,7 +56,7 @@ input_size = len(X_train[0])
 hidden_size = 8
 output_size = len(tags)
 learning_rate = 0.001
-num_epochs = 1000
+num_epochs = 200
 
 dataset = ChatDataset()
 train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers=0)

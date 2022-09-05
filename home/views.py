@@ -14,6 +14,7 @@ from .training.nltk_utils import bag_of_words, tokenize
 def home(request):
     context = {}
     return render(request, 'home.html', context)
+    
 
 def chatbot(request):
     device = torch.device('cuba' if torch.cuda.is_available() else 'cpu')
@@ -52,18 +53,16 @@ def chatbot(request):
     tag = tags[predicted.item()]
 
     probs = torch.softmax(output, dim=1)
+    print(probs)
     prob = probs[0][predicted.item()]
 
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent['tag']:
-                    # print(f"{bot_name}: {random.choice(intent['responses'])}")
-                    response = random.choice(intent['responses'])
+                # print(f"{bot_name}: {random.choice(intent['responses'])}")
+                response = random.choice(intent['responses'])
     else:
-        response = 'I do not understand...'
+        response = 'Oops! Sorry, I do not understand...🤖'
         # print(f"{bot_name}: I do not understand.. ")
-
-    # storing calculated response to variable "response"
-    # response = random.choice(intent['responses'])
 
     return JsonResponse({'response': response})

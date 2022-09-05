@@ -18,8 +18,3 @@ def bag_of_words(tokenized_sentence, all_words):
         if w in tokenized_sentence:
             bag[idx] = 1.0
     return bag
-
-sentence = ['hello', 'how', 'are', 'you']
-words = ['hi', 'hello', 'I', 'you', 'like', 'me', 'are']
-bag = bag_of_words(sentence, words)
-print(bag)
