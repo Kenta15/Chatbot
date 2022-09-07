@@ -56,7 +56,7 @@ input_size = len(X_train[0])
 hidden_size = 8
 output_size = len(tags)
 learning_rate = 0.001
-num_epochs = 500
+num_epochs = 300
 
 dataset = ChatDataset()
 train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True, num_workers=0)

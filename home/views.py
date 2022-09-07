@@ -8,7 +8,6 @@ from .training.model import NeuralNet
 from .training.nltk_utils import bag_of_words, tokenize
 
 
-
 # Create your views here.
 
 def home(request):
@@ -18,9 +17,9 @@ def home(request):
 
 def chatbot(request):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    with open('/Users/kentatanaka/MyProjects/chatbot/home/training/intents.json', 'r') as json_data:
+    with open('/Users/kentatanaka/MyProjects/chatbot/home/training/intents.json', 'r') as json_data: # your local path
         intents = json.load(json_data)
-    FILE = '/Users/kentatanaka/MyProjects/chatbot/home/training/data.pth'
+    FILE = '/Users/kentatanaka/MyProjects/chatbot/home/training/data.pth' # your local path
     data = torch.load(FILE)
 
     input_size = data['input_size']
@@ -35,8 +34,9 @@ def chatbot(request):
     model.eval()
 
     # getting fetching input from frontend
-    data = json.loads(request.body)
-    input = data['input'].lower()
+    json_input = json.loads(request.body)
+    print(json_input)
+    input = json_input['input'].lower()
     
     sentence = input
 
