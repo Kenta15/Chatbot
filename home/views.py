@@ -17,7 +17,7 @@ def home(request):
     
 
 def chatbot(request):
-    device = torch.device('cuba' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     with open('/Users/kentatanaka/MyProjects/chatbot/home/training/intents.json', 'r') as json_data:
         intents = json.load(json_data)
     FILE = '/Users/kentatanaka/MyProjects/chatbot/home/training/data.pth'

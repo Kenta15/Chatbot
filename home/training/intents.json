@@ -33,14 +33,52 @@
             ]
         },
         {
+            "tag": "cancelOrder",
+            "patterns": [
+                "how can I cancel order",
+                "is it possible to cancel order",
+                "how to cancel my order",
+                "I ordered items by mistake"
+            ],
+            "responses":[
+                "To cancel your order, please go to Account/Order/Cancel Order"
+            ]
+        },
+        {
             "tag": "refund",
             "patterns": [
+                "how can I get refund",
+                "is it possible to get refund",
+                "how to get refund",
+                "I want to request a refund"
+            ],
+            "responses":[
+                "To request a refund, go to Account/Your Orders/Request Refund"
+            ]
+        },
+        {
+            "tag": "whenRefund",
+            "patterns": [
                 "When will I get refund",
+                "when do I receive refund",
                 "How long should I wait for refund",
-                "how long should it take to get refund"
+                "how long should it take to get refund",
+                "refund is not issued yet"
             ],
             "responses":[
                 "the refund will be initiated in 2 buisiness days"
+            ]
+        },
+        {
+            "tag": "passedReturn",
+            "patterns": [
+                "return window has closed",
+                "return deadline has passed",
+                "I want to return item after 30 days",
+                "is it possible to return items after 30 days"
+            ],
+            "responses":[
+                "If you want to return items after 30 days of a purchase, please contact us directly at Account/Customer Service"
             ]
         },
         {
@@ -86,6 +124,7 @@
             "patterns": [
                 "How long does it take for shipping",
                 "When will my items be devivered",
+                "when do I get items I purchased",
                 "how long does it take to get items",
                 "how long should I wait to get items"
             ],
@@ -117,7 +156,7 @@
             ]
         },
         {
-            "tag": "setting",
+            "tag": "settings",
             "patterns": [
                 "I want to change email",
                 "how to change email settings",
