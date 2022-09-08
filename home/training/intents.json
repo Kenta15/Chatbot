@@ -59,14 +59,26 @@
         {
             "tag": "whenRefund",
             "patterns": [
-                "When will I get refund",
+                "when do I get refund",
                 "when do I receive refund",
                 "How long should I wait for refund",
                 "how long should it take to get refund",
                 "refund is not issued yet"
             ],
             "responses":[
-                "the refund will be initiated in 2 buisiness days"
+                "the refund will be initiated in 2 business days"
+            ]
+        },
+        {
+            "tag": "return",
+            "patterns": [
+                "I want to return items",
+                "how do I return items",
+                "is it possible to return items",
+                "how can I return items"
+            ],
+            "responses":[
+                "If you want to return items, please go to Account/Your Orders/Request Return and follow the instructions"
             ]
         },
         {
@@ -112,7 +124,6 @@
                 "what do you sell",
                 "what can I buy",
                 "what are the products you sell",
-                "how can I see the products",
                 "what merchandise do you sell"
             ],
             "responses":[
@@ -169,6 +180,19 @@
             ],
             "responses":[
                 "You can change your personal information at Account/User Settings. If you forgot current username or password, contact xx-xxxx-xxxx for more information"
+            ]
+        },
+        {
+            "tag": "yourwelcome",
+            "patterns": [
+                "thank you so much",
+                "thanks",
+                "I appreciate it"
+            ],
+            "responses":[
+                "You're welcome",
+                "It's my pleasure",
+                "anytime"
             ]
         }
 

@@ -4,6 +4,9 @@ import torch
 from model import NeuralNet
 from nltk_utils import tokenize, bag_of_words
 import random
+import playsound
+import os
+from gtts import gTTS 
 
 def speech():
     r = sr.Recognizer()
@@ -19,6 +22,14 @@ def speech():
             print('bot: Sorry, I did not get that')
         except sr.RequestError:
             print('bot: Sorry, the service is down')
+
+def speak(audio_string):
+    tts = gTTS(text=audio_string, lang='en')
+    r = random.randint(1, 100000000)
+    audio_file = 'audio-' + str(r) + '.mp3'
+    tts.save(audio_file)
+    playsound.playsound(audio_file)
+    os.remove(audio_file)
 
 def respond(voice_data):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -58,9 +69,12 @@ def respond(voice_data):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent['tag']:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                output = random.choice(intent['responses'])
+                print(f"{bot_name}: {output}")
+                speak(output)
     else:
         print(f"{bot_name}: I do not understand.. ")
+        speak('I do not understand')
 
 print('bot: How can I help you? (Say "exit" to exit)')
 
