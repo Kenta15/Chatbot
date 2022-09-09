@@ -5,7 +5,7 @@ from nltk.stem.porter import PorterStemmer
 
 stemmer = PorterStemmer()
 
-def tokenize(sentence): # separate a sentence into meaningful words
+def tokenize(sentence): # separate a sentence into words
     return nltk.word_tokenize(sentence)
 
 def stem(word): # reduce words to its roots # organize, organization, organizing -> organize
