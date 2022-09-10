@@ -94,7 +94,7 @@
     </form>
     </div>
     <div class="attribution">
-    <span>Robot Background by </span><a href="https://www.freepik.com/author/pch-vector">pch.vector </a><span>at </span> <a href="https://www.freepik.com/free-vector/chat-bot-set_9174411.htm#query=cute%20robot&position=1&from_view=keyword#position=1&query=cute%20robot">pch.vector</a>
+    <span>Robot Background by </span><a href="https://www.freepik.com/author/pch-vector">pch.vector </a><span>at </span> <a href="https://www.freepik.com/free-vector/chat-bot-set_9174411.htm#query=cute%20robot&position=1&from_view=keyword#position=1&query=cute%20robot">freepik</a>
     </div>
 
     <script>
@@ -213,6 +213,12 @@
 
             clickable = true
             $('#mic').css({'color':'black'})
+
+            if(response['input'].includes('thank')){
+                setTimeout(() => {
+                    window.location.reload()
+                }, 800)
+            }
         }
 
         function showResponse(response){

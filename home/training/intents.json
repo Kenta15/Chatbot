@@ -24,12 +24,15 @@
             "patterns": [
                 "tell me a joke",
                 "tell me something funny",
-                "make me laugh"
+                "make me laugh",
+                "let's here a joke",
+                "do you tell jokes"
             ],
             "responses":[
                 "What do you call a robot who likes to row? A row-bot!",
                 "How do robots pay for things? With cache, of course!",
-                "What is a robot's favorite type of music? Heavy metal!"
+                "What is a robot's favorite type of music? Heavy metal!",
+                "what is the scientist's favorite soda? Fizzics!"
             ]
         },
         {
@@ -38,7 +41,8 @@
                 "how can I cancel order",
                 "is it possible to cancel order",
                 "how to cancel my order",
-                "I ordered items by mistake"
+                "I ordered items by mistake",
+                "I don't want my order"
             ],
             "responses":[
                 "To cancel your order, please go to Account/Order/Cancel Order"
@@ -63,7 +67,9 @@
                 "when do I receive refund",
                 "How long should I wait for refund",
                 "how long should it take to get refund",
-                "refund is not issued yet"
+                "refund is not issued yet",
+                "how long does it take for a refund",
+                "why haven't I received a refund"
             ],
             "responses":[
                 "the refund will be initiated in 2 business days"
@@ -75,7 +81,11 @@
                 "I want to return items",
                 "how do I return items",
                 "is it possible to return items",
-                "how can I return items"
+                "how can I return items",
+                "can I get a return",
+                "I want to make a return",
+                "how is your return policy",
+                "where can I go to return Items"
             ],
             "responses":[
                 "If you want to return items, please go to Account/Your Orders/Request Return and follow the instructions"
@@ -99,7 +109,9 @@
                 "the item delivered is damaged",
                 "the item I got is incorrect",
                 "I got damaged items",
-                "What should I do if I received damaged items"
+                "What should I do if I received damaged items",
+                "the product is not what I ordered",
+                "I got the wrong item"
             ],
             "responses":[
                 "You can either request a refund or return defective items for replacement"
@@ -112,7 +124,8 @@
                 "when are you available",
                 "when is available for you",
                 "what time are you working",
-                "what time does work the best for you"
+                "what time does work the best for you",
+                "when are you off"
             ],
             "responses":[
                 "I am available 24/7 365days. Talk to me whenever you want!"
@@ -149,7 +162,8 @@
                 "my items are not still delivered",
                 "delivery is late",
                 "It has been a month after I purchase the product",
-                "I am still waiting for items to get devlivered"
+                "I am still waiting for items to get devlivered",
+                "whatis causing the delay"
             ],
             "responses":[
                 "If your items are not delivered within a week, please contact xx-xxxx-xxxx for more information."
@@ -192,7 +206,8 @@
             "responses":[
                 "You're welcome",
                 "It's my pleasure",
-                "anytime"
+                "anytime",
+                "Of course"
             ]
         }
 

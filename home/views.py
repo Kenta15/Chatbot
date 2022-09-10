@@ -22,7 +22,7 @@ def home(request):
 
 def alex(request):
     
-    def speech():
+    def speech(): # recognize the speech
         r = sr.Recognizer()
 
         with sr.Microphone() as source:
@@ -35,7 +35,7 @@ def alex(request):
             except sr.RequestError:
                 print('bot: Sorry, the service is down')
 
-    def speak(audio_string):
+    def speak(audio_string): # alex speaks
         tts = gTTS(text=audio_string, lang='en')
         r = random.randint(1, 100000000)
         audio_file = 'audio-' + str(r) + '.mp3'
@@ -43,7 +43,7 @@ def alex(request):
         playsound.playsound(audio_file)
         os.remove(audio_file)
 
-    def respond(voice_data):
+    def respond(voice_data): # train and respond
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         with open(os.path.join(sys.path[0],'home/training/intents.json'), 'r') as json_data:
             intents = json.load(json_data)

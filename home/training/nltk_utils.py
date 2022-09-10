@@ -8,7 +8,7 @@ stemmer = PorterStemmer()
 def tokenize(sentence): # separate a sentence into words
     return nltk.word_tokenize(sentence)
 
-def stem(word): # reduce words to its roots # organize, organization, organizing -> organize
+def stem(word): # reduce words to its roots # organize, organization, organizing -> organ
     return stemmer.stem(word.lower())
 
 def bag_of_words(tokenized_sentence, all_words): # counts occurrences of words
