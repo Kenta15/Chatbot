@@ -1,6 +1,4 @@
 # Chatbot
-
-# Chatbot
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -87,7 +85,7 @@ python manage.py runserver
 ## Demo
 
 Video Link: 
-https://user-images.githubusercontent.com/92241890/189480427-fa3177ce-5785-4d16-82d6-ba43220c73bf.mp4
+[Video](https://user-images.githubusercontent.com/92241890/189480427-fa3177ce-5785-4d16-82d6-ba43220c73bf.mp4)
 
 
 ## References
